@@ -23,9 +23,9 @@ describe("public scaffold", () => {
       version: expect.stringMatching(
         /^(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-(?:alpha|beta|rc)\.[1-9]\d*)?$/,
       ),
-      repository: { url: "git+https://github.com/teng-lin/weread-omni.git" },
-      homepage: "https://github.com/teng-lin/weread-omni#readme",
-      bugs: "https://github.com/teng-lin/weread-omni/issues",
+      repository: { url: "git+https://github.com/qiaoqiao2521/weread-omni1.git" },
+      homepage: "https://github.com/qiaoqiao2521/weread-omni1#readme",
+      bugs: "https://github.com/qiaoqiao2521/weread-omni1/issues",
       exports: { ".": expect.any(Object) },
     });
     // The packed surface (files/exports/bin) is the release contract; test/unit/release.test.ts

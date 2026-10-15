@@ -62,13 +62,13 @@ weread-omni --account default shelf sync --json
 使用 [skills CLI](https://github.com/vercel-labs/skills) 安装：
 
 ```bash
-npx skills add teng-lin/weread-omni --skill weread
+npx skills add qiaoqiao2521/weread-omni1 --skill weread
 ```
 
 也可以直接全局安装到 Codex 和 Claude Code：
 
 ```bash
-npx skills add teng-lin/weread-omni --skill weread --global --agent codex --agent claude-code --yes
+npx skills add qiaoqiao2521/weread-omni1 --skill weread --global --agent codex --agent claude-code --yes
 ```
 
 查看或更新项目内安装的 skill：

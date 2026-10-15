@@ -38,7 +38,7 @@ happens it is called out prominently in [`CHANGELOG.md`](CHANGELOG.md).
 **Do not open a public issue for a security report.**
 
 Use GitHub's private vulnerability reporting:
-<https://github.com/teng-lin/weread-omni/security/advisories/new>. The report
+<https://github.com/qiaoqiao2521/weread-omni1/security/advisories/new>. The report
 stays private to you and the maintainer until an advisory is published.
 
 Please include, as far as you can determine them:

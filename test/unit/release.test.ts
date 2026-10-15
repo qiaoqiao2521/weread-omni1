@@ -87,12 +87,12 @@ describe("release artifacts", () => {
     };
 
     expect(manifest.author).toBe("Teng Lin");
-    expect(manifest.homepage).toBe("https://github.com/teng-lin/weread-omni#readme");
-    expect(manifest.bugs).toBe("https://github.com/teng-lin/weread-omni/issues");
+    expect(manifest.homepage).toBe("https://github.com/qiaoqiao2521/weread-omni1#readme");
+    expect(manifest.bugs).toBe("https://github.com/qiaoqiao2521/weread-omni1/issues");
     // Provenance attestation compares this against the publishing repository.
     expect(manifest.repository).toEqual({
       type: "git",
-      url: "git+https://github.com/teng-lin/weread-omni.git",
+      url: "git+https://github.com/qiaoqiao2521/weread-omni1.git",
     });
     // Declared in the manifest as well as on the publish command line, so a manual
     // `npm publish` cannot accidentally go out scoped-private or unattested.
@@ -200,7 +200,7 @@ describe("release artifacts", () => {
     const policy = await text("SECURITY.md");
     const runbook = await text("docs/releasing.md");
 
-    expect(policy).toContain("https://github.com/teng-lin/weread-omni/security/advisories/new");
+    expect(policy).toContain("https://github.com/qiaoqiao2521/weread-omni1/security/advisories/new");
     expect(policy).toContain("Do not open a public issue");
     expect(runbook).toContain('gh api "repos/$repo/private-vulnerability-reporting" --jq .enabled');
     expect(runbook).toContain("requires sign-in");
@@ -593,7 +593,7 @@ describe("release artifacts", () => {
       expect(runbook).toContain(command);
     }
     expect(runbook).toContain("separate approval");
-    expect(runbook).toContain("repository: teng-lin/weread-omni");
+    expect(runbook).toContain("repository: qiaoqiao2521/weread-omni1");
     expect(runbook).toContain("workflow: release.yml");
     expect(runbook).toContain("environment: npm-publish");
     expect(runbook).toContain("createPackage: true");

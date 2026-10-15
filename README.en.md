@@ -61,13 +61,13 @@ The bundled `weread` skill teaches an agent to check authentication, call the JS
 Install it with the [skills CLI](https://github.com/vercel-labs/skills):
 
 ```bash
-npx skills add teng-lin/weread-omni --skill weread
+npx skills add qiaoqiao2521/weread-omni1 --skill weread
 ```
 
 To install globally for Codex and Claude Code without prompts:
 
 ```bash
-npx skills add teng-lin/weread-omni --skill weread --global --agent codex --agent claude-code --yes
+npx skills add qiaoqiao2521/weread-omni1 --skill weread --global --agent codex --agent claude-code --yes
 ```
 
 Inspect or update a project installation with:

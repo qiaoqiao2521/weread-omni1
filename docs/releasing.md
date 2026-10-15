@@ -19,7 +19,7 @@ identifiers:
 
 ```bash
 set -euo pipefail
-repo=teng-lin/weread-omni
+repo=qiaoqiao2521/weread-omni1
 package=weread-omni
 release_version=0.1.0
 release_tag=v0.1.0
@@ -463,7 +463,7 @@ rm -rf -- "$verify_dir"
 ```
 
 Also inspect the provenance statement and require repository
-`https://github.com/teng-lin/weread-omni`, workflow
+`https://github.com/qiaoqiao2521/weread-omni1`, workflow
 `.github/workflows/release.yml`, tag ref, release run, release SHA, package
 version, and SHA-512 digest all to match the recorded candidate.
 
@@ -474,7 +474,7 @@ only after the package exists and bootstrap cleanup is proven. The sole expected
 relationship is:
 
 ```yaml
-repository: teng-lin/weread-omni
+repository: qiaoqiao2521/weread-omni1
 workflow: release.yml
 environment: npm-publish
 createPackage: true

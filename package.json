@@ -20,11 +20,11 @@
     "rss",
     "typescript"
   ],
-  "homepage": "https://github.com/teng-lin/weread-omni#readme",
-  "bugs": "https://github.com/teng-lin/weread-omni/issues",
+  "homepage": "https://github.com/qiaoqiao2521/weread-omni1#readme",
+  "bugs": "https://github.com/qiaoqiao2521/weread-omni1/issues",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/teng-lin/weread-omni.git"
+    "url": "git+https://github.com/qiaoqiao2521/weread-omni1.git"
   },
   "license": "MIT",
   "author": "Teng Lin",
