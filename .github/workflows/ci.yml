@@ -11,8 +11,13 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event_name == 'workflow_dispatch' && github.run_id || github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   test:
+    timeout-minutes: 30
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -26,6 +31,7 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
+          cache-dependency-path: package-lock.json
           node-version: ${{ matrix.node-version }}
           cache: npm
       - run: npm ci --engine-strict
@@ -37,6 +43,7 @@ jobs:
       - run: npm pack --dry-run
 
   install-smoke:
+    timeout-minutes: 30
     name: Install smoke (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
@@ -50,6 +57,7 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
+          cache-dependency-path: package-lock.json
           node-version: 24
           cache: npm
       - run: npm ci --engine-strict
@@ -90,6 +98,7 @@ jobs:
     # test/unit and test/integration, so anything asserted solely under test/e2e is
     # unverified everywhere else until a release candidate runs — which is long after
     # a mistake is cheap to fix.
+    timeout-minutes: 30
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
@@ -97,6 +106,7 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
+          cache-dependency-path: package-lock.json
           node-version: 24
           cache: npm
       - run: npm ci --engine-strict

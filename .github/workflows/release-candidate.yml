@@ -18,6 +18,7 @@ permissions:
 
 jobs:
   candidate:
+    timeout-minutes: 30
     runs-on: ubuntu-latest
     env:
       CANDIDATE_COMMIT: ${{ inputs.commit }}
@@ -44,6 +45,7 @@ jobs:
 
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
+          cache-dependency-path: package-lock.json
           node-version: 22.14.0
           cache: npm
 

@@ -38,11 +38,14 @@ on:
 
 permissions:
   contents: read
-  actions: read
-  id-token: write
 
 jobs:
   publish:
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      actions: read
+      id-token: write
     runs-on: ubuntu-latest
     # `workflow_dispatch` is available to anyone with write access, so the workflow's own
     # input validation is not an authorization boundary. Required reviewers on the
